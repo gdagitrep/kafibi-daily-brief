@@ -39,7 +39,7 @@ const HowItWorks = () => {
               className="p-8 md:p-12 first:pl-0 last:pr-0"
             >
               <span className="font-mono text-xs text-kafibi-slate tracking-widest">{step.number}</span>
-              <h3 className="font-display text-2xl italic text-foreground mt-4 mb-4">{step.title}</h3>
+              <h3 className="font-display text-2xl font-semibold text-foreground mt-4 mb-4">{step.title}</h3>
               <p className="text-base leading-relaxed text-muted-foreground">{step.text}</p>
             </motion.div>
           ))}

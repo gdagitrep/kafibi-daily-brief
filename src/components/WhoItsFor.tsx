@@ -8,12 +8,12 @@ const traits = [
 
 const WhoItsFor = () => {
   return (
-    <section className="py-32 px-6 border-b border-border">
+    <section className="py-16 px-6 border-b border-border">
       <div className="max-w-3xl mx-auto">
         <p className="text-xs font-mono uppercase tracking-[0.2em] text-kafibi-slate mb-3">
           Audience
         </p>
-        <h2 className="font-display text-4xl md:text-5xl italic tracking-tight text-foreground mb-6">
+        <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
           Who it's for
         </h2>
         <p className="text-lg leading-relaxed text-muted-foreground mb-12">

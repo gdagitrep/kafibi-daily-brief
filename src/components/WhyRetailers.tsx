@@ -44,7 +44,7 @@ const WhyRetailers = () => {
               className="bg-background p-10 md:p-12"
             >
               <div className={`w-2 h-2 rounded-full ${reason.color} mb-6`} />
-              <h3 className="font-display text-xl italic text-foreground mb-3">{reason.title}</h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{reason.title}</h3>
               <p className="text-base leading-relaxed text-muted-foreground">{reason.text}</p>
             </motion.div>
           ))}

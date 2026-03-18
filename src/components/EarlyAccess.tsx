@@ -49,7 +49,7 @@ const EarlyAccess = () => {
             />
             <button
               type="submit"
-              className="bg-foreground text-background px-8 py-4 text-sm font-medium tracking-[0.1em] uppercase hover:translate-y-[1px] transition-transform shrink-0"
+              className="bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-[0.1em] uppercase hover:bg-primary/90 transition-colors shrink-0"
             >
               Request Invite
             </button>

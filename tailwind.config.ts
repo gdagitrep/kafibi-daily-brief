@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Instrument Serif", "serif"],
-        sans: ["Geist Sans", "system-ui", "sans-serif"],
-        mono: ["Geist Mono", "monospace"],
+        display: ["DM Sans", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
+        mono: ["DM Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
