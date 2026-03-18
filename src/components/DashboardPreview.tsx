@@ -68,7 +68,7 @@ const DashboardPreview = () => {
               <div className="w-3 h-3 rounded-full bg-[hsl(140,50%,55%)]" />
             </div>
             <div className="flex-1 text-center text-xs text-muted-foreground font-mono">
-              kafibi.com — Daily Brief
+              kafibi.com - Daily Brief
             </div>
           </div>
 
