@@ -33,7 +33,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.19, 1, 0.22, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.19, 1, 0.22, 1] as const } },
 };
 
 const DailyBrief = () => {
