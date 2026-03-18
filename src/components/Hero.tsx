@@ -36,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
           className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-[60ch] mx-auto"
         >
-          Kafibi connects to the tools you already use and turns messy operations data into a short, plain‑language daily brief: what's at risk, what to reorder, and which levers to pull to protect cash and sales.
+          Kafibi connects to the tools you already use and turns messy operations data into a short, plain-language daily brief: what's at risk, what to reorder, and which levers to pull to protect cash and sales.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

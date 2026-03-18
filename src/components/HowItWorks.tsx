@@ -4,7 +4,7 @@ const steps = [
   {
     number: "01",
     title: "Connect your data",
-    text: "POS, ecommerce, inventory, and suppliers—no new systems to learn.",
+    text: "POS, ecommerce, inventory, and suppliers. No new systems to learn.",
     borderColor: "border-t-primary",
   },
   {

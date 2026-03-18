@@ -5,7 +5,7 @@ const actions = [
     label: "INVENTORY ALERT",
     labelColor: "text-destructive",
     dotColor: "bg-destructive",
-    text: 'Rush PO for "Heritage Denim" — stock will deplete by Thursday.',
+    text: 'Rush PO for "Heritage Denim" stock will deplete by Thursday.',
     action: "Create PO",
     actionFilled: true,
   },
@@ -53,6 +53,9 @@ const DashboardPreview = () => {
   return (
     <section className="py-12 px-6">
       <div className="max-w-5xl mx-auto">
+        <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">
+          See it in action
+        </p>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +71,7 @@ const DashboardPreview = () => {
               <div className="w-3 h-3 rounded-full bg-[hsl(140,50%,55%)]" />
             </div>
             <div className="flex-1 text-center text-xs text-muted-foreground font-mono">
-              kafibi.com — Daily Brief
+              kafibi.com - Daily Brief
             </div>
           </div>
 
@@ -110,7 +113,7 @@ const DashboardPreview = () => {
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground mb-1">
-                    Your Daily Brief — March 18, 2026
+                    Your Daily Brief - March 18, 2026
                   </p>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                     Today's <em className="font-serif italic">priorities.</em>
