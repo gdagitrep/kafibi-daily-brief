@@ -25,11 +25,10 @@ const EarlyAccess = () => {
           Early Access
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
-          Join the first cohort
+          Built with operators, not just for them.
         </h2>
         <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-          We're working closely with a small group of operators to shape Kafibi.
-          Leave your email if you'd like to be considered.
+          Kafibi is live with a small group of retail operators shaping us from the ground up. If you want to know what's coming before it hits your operations, leave your email and we'll be in touch!
         </p>
         {submitted ? (
           <div className="border-2 border-secondary p-8">
