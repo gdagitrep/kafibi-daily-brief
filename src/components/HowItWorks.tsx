@@ -10,7 +10,7 @@ const steps = [
   {
     number: "02",
     title: "We understand your operation",
-    text: "Kafibi tracks inventory, sales velocity, and upcoming commitments across every SKU and location.",
+    text: "Kabifi tracks inventory, sales velocity, and upcoming commitments across every SKU and location.",
     borderColor: "border-t-secondary",
   },
   {

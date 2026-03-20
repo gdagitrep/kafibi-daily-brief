@@ -14,7 +14,7 @@ const reasons = [
   {
     borderColor: "border-l-accent",
     title: "Inventory as a live pulse in the business.",
-    text: "Kafibi turns stock levels, sales, and external signals (like weather, ads, and local demand) into concrete actions, not more reports.",
+    text: "Kabifi turns stock levels, sales, and external signals (like weather, ads, and local demand) into concrete actions, not more reports.",
   },
   {
     borderColor: "border-l-secondary",
@@ -31,7 +31,7 @@ const WhyRetailers = () => {
           Value
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-10">
-          Why retailers use Kafibi
+          Why retailers use Kabifi
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {reasons.map((reason, i) => (

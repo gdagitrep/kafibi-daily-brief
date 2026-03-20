@@ -71,7 +71,7 @@ const DashboardPreview = () => {
               <div className="w-3 h-3 rounded-full bg-[hsl(140,50%,55%)]" />
             </div>
             <div className="flex-1 text-center text-xs text-muted-foreground font-mono">
-              kafibi.com - Daily Brief
+              kabifi.com - Daily Brief
             </div>
           </div>
 
@@ -81,7 +81,7 @@ const DashboardPreview = () => {
               <div>
                 <div className="flex items-center gap-2 mb-8">
                   <div className="w-8 h-8 bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold rounded-sm">K</div>
-                  <span className="text-sm font-bold text-foreground">Kafibi</span>
+                  <span className="text-sm font-bold text-foreground">Kabifi</span>
                 </div>
                 <div className="space-y-1">
                   {sidebarItems.map((item) => (

@@ -7,9 +7,9 @@ const Navbar = () => {
       <nav className="bg-background border-b-2 border-primary/20">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Kafibi logo" className="h-6 w-auto" />
+            <img src={logo} alt="Kabifi logo" className="h-6 w-auto" />
             <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary">
-              Kafibi
+              Kabifi
             </span>
           </div>
           <a
