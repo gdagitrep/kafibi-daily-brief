@@ -4,11 +4,40 @@ import { useState } from "react";
 const EarlyAccess = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+
+    if (!email) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/request-invite", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(data?.error || "Unable to submit request");
+      }
+
       setSubmitted(true);
+      setEmail("");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Unable to submit request";
+      setError(message);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -37,21 +66,32 @@ const EarlyAccess = () => {
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex gap-0">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@company.com"
-              required
-              className="flex-1 border-2 border-primary/20 border-r-0 px-5 py-4 text-sm bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
-            <button
-              type="submit"
-              className="bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-[0.1em] uppercase hover:bg-primary/90 transition-colors shrink-0"
-            >
-              Request Invite
-            </button>
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div className="flex gap-0">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@company.com"
+                required
+                disabled={isSubmitting}
+                className="flex-1 border-2 border-primary/20 border-r-0 bg-background px-5 py-4 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-primary focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="shrink-0 bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {isSubmitting ? "Sending..." : "Request Invite"}
+              </button>
+            </div>
+            {error ? (
+              <p className="text-sm text-destructive">{error}</p>
+            ) : (
+              <p className="text-xs text-muted-foreground">
+                Submissions send an email to contact@kabifi.com.
+              </p>
+            )}
           </form>
         )}
       </motion.div>
