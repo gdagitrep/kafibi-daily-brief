@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const reasons = [
   {
     borderColor: "border-l-primary",
-    title: "A dedicated operations arm without a new hire.",
-    text: "We watch the numbers so your team can focus on what matters: product, customers, and brand.",
+    title: "Contextual Operations Hire",
+    text: "A dedicated operations arm without a new hire so you can focus on what matters: product, customers, and brand.",
   },
   {
     borderColor: "border-l-secondary",
-    title: "Clear daily priorities instead of noise.",
-    text: "One short list of what needs attention across inventory, suppliers, staffing, and promotions.",
+    title: "Data into clear priorities",
+    text: "One short list of what actually needs attention each day.",
   },
   {
     borderColor: "border-l-accent",
-    title: "Inventory as a live pulse in the business.",
-    text: "Kabifi connects stock levels, sales velocity, and external signals into concrete actions — not more reports to interpret.",
+    title: "Replaces reports with actions",
+    text: "Connects stock levels, sales, and external signals (like weather, ads, and local demand) into concrete actions, not more reports.",
   },
   {
     borderColor: "border-l-secondary",
-    title: 'Fewer "did we miss something?" moments.',
-    text: "Less confusion or surprises, and more confidence that today's work is pointed in the right direction for YOUR business.",
+    title: "You run the day with confidence",
+    text: 'Fewer "did we miss something?" moments.',
   },
 ];
 
