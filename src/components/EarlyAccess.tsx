@@ -56,9 +56,6 @@ const EarlyAccess = () => {
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
           Built with operators, not just for them.
         </h2>
-        <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-          Kabifi is live with a small group of retail operators shaping us from the ground up. If you want to know what's coming before it hits your operations, leave your email and we'll reach out within 24 hours.
-        </p>
         {submitted ? (
           <div className="border-2 border-secondary p-8">
             <p className="text-base font-medium text-secondary">
@@ -82,7 +79,7 @@ const EarlyAccess = () => {
                 disabled={isSubmitting}
                 className="shrink-0 bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {isSubmitting ? "Sending..." : "Request Invite"}
+                {isSubmitting ? "Sending..." : "Contact"}
               </button>
             </div>
             {error ? (
