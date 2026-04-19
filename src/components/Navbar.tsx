@@ -15,16 +15,10 @@ const Navbar = () => {
             </span>
           </Link>
           <div className="flex items-center gap-5">
-            <Link
-              to="/contact"
-              className="hidden text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground transition-colors hover:text-primary md:block"
-            >
-              Contact
-            </Link>
             <RequestInviteLink
               className="text-xs font-semibold tracking-[0.1em] uppercase border border-primary text-primary px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors"
             >
-              Request Invite
+              Request Access
             </RequestInviteLink>
           </div>
         </div>
