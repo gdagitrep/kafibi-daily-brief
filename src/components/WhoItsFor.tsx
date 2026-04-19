@@ -10,9 +10,6 @@ const WhoItsFor = () => {
   return (
     <section className="py-12 px-6 border-b border-border">
       <div className="max-w-3xl mx-auto">
-        <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-3">
-          Audience
-        </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
           Who it's for
         </h2>
