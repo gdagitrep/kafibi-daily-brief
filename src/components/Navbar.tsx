@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import RequestInviteLink from "@/components/RequestInviteLink";
+import RequestAccessDialog from "@/components/RequestAccessDialog";
 
 const Navbar = () => {
   return (
@@ -15,11 +15,16 @@ const Navbar = () => {
             </span>
           </Link>
           <div className="flex items-center gap-5">
-            <RequestInviteLink
-              className="text-xs font-semibold tracking-[0.1em] uppercase border border-primary text-primary px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              Request Access
-            </RequestInviteLink>
+            <RequestAccessDialog
+              trigger={
+                <button
+                  type="button"
+                  className="text-xs font-semibold tracking-[0.1em] uppercase border border-primary text-primary px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  Request Access
+                </button>
+              }
+            />
           </div>
         </div>
       </nav>
