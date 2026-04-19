@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
           className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
         >
-          Know exactly what to do today before your operation falls behind.
+          The Operations Layer You Don't Have
         </motion.h1>
         <motion.div
           initial={{ scaleX: 0 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
           className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-[60ch] mx-auto"
         >
-          Kabifi connects to the tools you use already and turns your operations data into a short, plain-language daily brief: what's at risk, what to reorder, and which levers to pull to protect cash and sales.
+          Your operation is already generating the signals. Kabifi turns them into decisions built around how your business actually runs.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
