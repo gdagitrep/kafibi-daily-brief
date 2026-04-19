@@ -4,19 +4,19 @@ const steps = [
   {
     number: "01",
     title: "Connect your data",
-    text: "Connect your data POS, inventory, suppliers. No new systems to learn.",
+    text: "Plug in your POS, inventory,  and suppliers. No new systems to learn.",
     borderColor: "border-t-primary",
   },
   {
     number: "02",
-    title: "We understand your operation",
-    text: "Kabifi learns your operation Velocity, patterns, reorder windows, risk signals. Automatically.",
+    title: "We learn your operation",
+    text: "Kabifi maps your operation velocity, patterns, reorder windows and risk signals. Automatically.",
     borderColor: "border-t-secondary",
   },
   {
     number: "03",
-    title: "You get a daily action list",
-    text: "You get your brief every morning Three to five specific actions. What to order, what to move, what to watch. Before you open the door.",
+    title: "Get your daily action list",
+    text: "Each morning get 3-5 clear actions. Covering what to order, what to move, what to watch and ultimately what to do. ",
     borderColor: "border-t-accent",
   },
 ];
