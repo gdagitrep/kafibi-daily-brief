@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const traits = [
-  { label: "You run one to three locations and your own product line", color: "border-l-primary" },
-  { label: "You're selling through your store, online, or both", color: "border-l-secondary" },
-  { label: "You're making inventory decisions faster than your data can keep up", color: "border-l-accent" },
+  { label: "You run 1 - 3 locations", color: "border-l-primary" },
+  { label: "You sell in store, online, or both", color: "border-l-secondary" },
+  { label: "You make decisions faster than your systems can keep up", color: "border-l-accent" },
 ];
 
 const WhoItsFor = () => {
