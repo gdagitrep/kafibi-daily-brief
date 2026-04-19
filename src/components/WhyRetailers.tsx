@@ -19,7 +19,7 @@ const reasons = [
   {
     borderColor: "border-l-secondary",
     title: "You run the day with confidence",
-    text: 'Fewer "did we miss something?" moments.',
+    text: 'Fewer "did we miss something?" moments. No more second guessing.',
   },
 ];
 
