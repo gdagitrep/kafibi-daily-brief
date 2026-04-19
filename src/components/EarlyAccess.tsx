@@ -11,9 +11,6 @@ const EarlyAccess = () => {
         transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
         className="max-w-xl mx-auto text-center"
       >
-        <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-3">
-          Early Access
-        </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
           Built with operators, not just for them.
         </h2>
