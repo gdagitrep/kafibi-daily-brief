@@ -62,7 +62,7 @@ const RequestAccessDialog = ({ trigger }: RequestAccessDialogProps) => {
       `Company: ${company}`,
       `Company size: ${size}`,
       `Location: ${location}`,
-      `Best time to call: ${callTime}`,
+      `Best time to connect: ${callTime}`,
     ].join("\n");
 
     window.location.href = `mailto:service@kabifi.com?subject=${encodeURIComponent(
@@ -85,7 +85,7 @@ const RequestAccessDialog = ({ trigger }: RequestAccessDialogProps) => {
             Request Access
           </DialogTitle>
           <DialogDescription>
-            Tell us a bit about your operation and we'll be in touch.
+            Tell us a bit about your operation and we'll be in touch within 24 hours.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -160,7 +160,7 @@ const RequestAccessDialog = ({ trigger }: RequestAccessDialogProps) => {
             </div>
           </div>
           <div className="space-y-2">
-            <p className={labelClass}>Best time to call</p>
+            <p className={labelClass}>Best time to connect</p>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
               {callTimes.map((time) => {
                 const active = form.callTime === time;
