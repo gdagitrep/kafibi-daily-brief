@@ -25,9 +25,6 @@ const HowItWorks = () => {
   return (
     <section className="py-12 px-6 border-b border-border">
       <div className="max-w-5xl mx-auto">
-        <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-3">
-          Process
-        </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-10">
           How it works
         </h2>
