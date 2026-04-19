@@ -5,7 +5,7 @@ const Terms = () => {
   return (
     <PageShell>
       <InfoPage
-        eyebrow={"\n"}
+        eyebrow=""
         title="Terms of Use"
         intro="These terms govern access to and use of the Kabifi website. By using the site, you agree to these terms."
       >
