@@ -51,7 +51,7 @@ const Hero = () => {
                 type="button"
                 className="inline-block bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-[0.1em] uppercase hover:bg-primary/90 transition-colors"
               >
-                Get Early Access
+                GET ACCESS
               </button>
             }
           />
