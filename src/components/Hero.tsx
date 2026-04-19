@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import RequestInviteLink from "@/components/RequestInviteLink";
+import RequestAccessDialog from "@/components/RequestAccessDialog";
 
 const Hero = () => {
   return (
@@ -45,11 +45,16 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.19, 1, 0.22, 1] }}
           className="mt-8"
         >
-          <RequestInviteLink
-            className="inline-block bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-[0.1em] uppercase hover:bg-primary/90 transition-colors"
-          >
-            Get Early Access
-          </RequestInviteLink>
+          <RequestAccessDialog
+            trigger={
+              <button
+                type="button"
+                className="inline-block bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-[0.1em] uppercase hover:bg-primary/90 transition-colors"
+              >
+                Get Early Access
+              </button>
+            }
+          />
         </motion.div>
       </div>
     </section>
