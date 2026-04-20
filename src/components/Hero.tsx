@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
           className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
         >
-          Know what needs attention today, before it becomes a problem for later.
+          Know what needs attention today, before it becomes a problem for <em className="italic">later</em>.
         </motion.h1>
         <motion.div
           initial={{ scaleX: 0 }}
