@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
           className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-[60ch] mx-auto"
         >
-          Your operation is already generating the signals. Kabifi turns them into decisions built around how your business actually runs.
+          Your operation is already generating the signals. Kabifi turns them into a system built around how your business actually runs.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
