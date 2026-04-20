@@ -11,7 +11,7 @@ const Hero = () => {
           transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
         >
           <span className="inline-block border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.15em] px-4 py-1.5 mb-6">
-            Predictive Operations Intelligence
+            YOUR DAILY DECISION ENGINE FOR RETAIL OPERATIONS
           </span>
         </motion.div>
         <motion.h1
