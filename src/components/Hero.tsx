@@ -3,7 +3,7 @@ import RequestAccessDialog from "@/components/RequestAccessDialog";
 
 const Hero = () => {
   return (
-    <section className="pt-28 pb-12 px-6 border-b border-secondary/30">
+    <section className="pt-24 pb-10 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
