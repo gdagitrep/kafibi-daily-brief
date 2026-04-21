@@ -25,7 +25,7 @@ const reasons = [
 
 const WhyRetailers = () => {
   return (
-    <section className="py-10 px-6 border-b border-secondary/30">
+    <section className="py-8 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-10">
           Why retailers use Kabifi
