@@ -51,7 +51,7 @@ const sidebarItems = [
 
 const DashboardPreview = () => {
   return (
-    <section className="py-12 px-6">
+    <section className="py-10 px-6 border-b border-secondary/30">
       <div className="max-w-5xl mx-auto">
         <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">
           DAILY BRIEF
