@@ -54,7 +54,7 @@ const DashboardPreview = () => {
     <section className="py-8 px-6">
       <div className="max-w-5xl mx-auto">
         <p className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">
-          DAILY BRIEF
+          {"\n"}
         </p>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
