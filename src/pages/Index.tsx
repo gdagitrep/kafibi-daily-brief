@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <PageShell>
       <Hero />
-      <HowItWorks />
       <DashboardPreview />
+      <HowItWorks />
       <WhyRetailers />
       <WhoItsFor />
       <EarlyAccess />
