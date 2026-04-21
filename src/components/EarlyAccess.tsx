@@ -20,7 +20,7 @@ const EarlyAccess = () => {
               type="button"
               className="bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Request Access
+              Free Ops Snapshot
             </button>
           }
         />
