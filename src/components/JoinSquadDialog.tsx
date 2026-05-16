@@ -29,8 +29,12 @@ const labelClass =
   "text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground";
 const hintClass = "text-xs text-muted-foreground italic leading-relaxed";
 
+const RECIPIENT = "service@kabifi.com";
+
 const JoinSquadDialog = ({ trigger }: Props) => {
   const [open, setOpen] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [lastMailto, setLastMailto] = useState<string>("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [form, setForm] = useState<FormState>({
     name: "",
@@ -81,16 +85,58 @@ const JoinSquadDialog = ({ trigger }: Props) => {
       `- ${d.proof2}`,
       `- ${d.proof3}`,
     ].join("\n");
-    window.location.href = `mailto:service@kabifi.com?subject=${encodeURIComponent(
+    const mailto = `mailto:${RECIPIENT}?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`;
-    setOpen(false);
+    setLastMailto(mailto);
+    window.location.href = mailto;
+    setSent(true);
+  };
+
+  const handleOpenChange = (next: boolean) => {
+    setOpen(next);
+    if (!next) {
+      // reset after close animation
+      setTimeout(() => {
+        setSent(false);
+        setErrors({});
+      }, 200);
+    }
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        {sent ? (
+          <div className="py-6 space-y-6">
+            <DialogHeader>
+              <DialogTitle className="font-display text-3xl">Application <em className="italic">on its way</em>.</DialogTitle>
+              <DialogDescription className="text-sm leading-relaxed">
+                Your email app should have just opened with the application pre-filled. Hit send there to deliver it to our team.
+              </DialogDescription>
+            </DialogHeader>
+
+            <div className="border-2 border-primary/20 bg-muted/40 p-5 space-y-3">
+              <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground">Sending to</p>
+              <p className="font-mono text-base text-foreground break-all">{RECIPIENT}</p>
+            </div>
+
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              No email client opened? <a href={lastMailto} className="underline text-foreground hover:text-primary">Click here to try again</a>, or email us directly at{" "}
+              <a href={`mailto:${RECIPIENT}`} className="underline text-foreground hover:text-primary">{RECIPIENT}</a>.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => handleOpenChange(false)}
+              className="w-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Done
+            </button>
+          </div>
+        ) : (
+          <>
         <DialogHeader>
           <DialogTitle className="font-display text-3xl">JOIN THE OPS SQUAD</DialogTitle>
           <DialogDescription className="text-sm leading-relaxed">
@@ -153,9 +199,11 @@ const JoinSquadDialog = ({ trigger }: Props) => {
             Send Application
           </button>
           <p className="text-xs text-muted-foreground">
-            This opens your email app with the application pre-filled to service@kabifi.com.
+            This opens your email app with the application pre-filled to {RECIPIENT}.
           </p>
         </form>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );
