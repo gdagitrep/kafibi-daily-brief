@@ -110,7 +110,7 @@ const About = () => {
           <div className="mt-16 pt-8 border-t border-ink/15">
             <p className="font-display text-3xl text-foreground">Richard Graystone</p>
             <p className="mt-1 text-xs font-mono uppercase tracking-[0.25em] text-foreground/60">
-              Founder & CEO, Kabifi
+              CEO, KABIFI
             </p>
           </div>
         </div>
