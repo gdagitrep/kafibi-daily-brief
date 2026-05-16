@@ -1,6 +1,6 @@
 import PageShell from "@/components/PageShell";
 import JoinSquadDialog from "@/components/JoinSquadDialog";
-import collabImg from "@/assets/careers-collab.jpg";
+
 import whiteboardImg from "@/assets/careers-whiteboard.jpg";
 import warehouseImg from "@/assets/careers-warehouse.jpg";
 import debateImg from "@/assets/careers-debate.jpg";
@@ -32,8 +32,8 @@ const Careers = () => {
   return (
     <PageShell>
       {/* Hero with photo */}
-      <section className="bg-ink text-secondary-foreground pt-28 pb-0 px-0">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-ink text-secondary-foreground pt-28 pb-20 px-6">
+        <div className="max-w-7xl mx-auto">
           <div className="flex items-baseline justify-between gap-6 mb-10">
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-accent">
               Careers / 2026
@@ -55,31 +55,14 @@ const Careers = () => {
                 <p className="text-lg text-secondary-foreground/75 leading-relaxed">
                   We build tools for the people who make physical things. The CPG founders who carry the weight of the supply chain on their backs.
                 </p>
+                <a
+                  href="#join"
+                  className="mt-6 inline-block text-xs font-mono uppercase tracking-[0.25em] text-secondary-foreground border-b border-accent pb-1 hover:text-accent transition-colors"
+                >
+                  Scroll to apply ↓
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Full-bleed hero image */}
-        <div className="mt-16 relative">
-          <img
-            src={collabImg}
-            alt="Kabifi team collaborating on the production floor"
-            width={1280}
-            height={896}
-            className="w-full h-[60vh] md:h-[78vh] object-cover grayscale"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent pointer-events-none" />
-          <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 text-secondary-foreground">
-            <p className="text-xs font-mono uppercase tracking-[0.25em] text-secondary-foreground/70">
-              Fig. 01 / On the floor, not the cloud
-            </p>
-            <a
-              href="#join"
-              className="text-xs font-mono uppercase tracking-[0.25em] border-b border-accent pb-1 hover:text-accent transition-colors"
-            >
-              Scroll to apply ↓
-            </a>
           </div>
         </div>
       </section>
