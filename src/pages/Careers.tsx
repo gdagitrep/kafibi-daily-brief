@@ -92,7 +92,7 @@ const Careers = () => {
               Chapter 01
             </p>
             <h2 className="font-display text-4xl md:text-5xl leading-[1.05] tracking-tight">
-              Silicon Valley doesn't understand this world the way we do. <em className="italic">We do.</em>
+              Silicon Valley doesn't understand this world <em className="italic">the way we do</em>.
             </h2>
             <div className="mt-8">
               <img
