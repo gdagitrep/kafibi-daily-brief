@@ -18,9 +18,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
-          className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
+          className="font-display md:text-6xl tracking-tight text-foreground leading-[1.1] font-semibold text-5xl"
         >
-          Know what needs attention today, before it becomes a stock-out, a compliance failure, or a missed buyer follow-up <em className="italic">tomorrow</em>.
+          Spot stock-outs, compliance gaps, and missed follow-ups before they happen. 
         </motion.h1>
         <motion.div
           initial={{ scaleX: 0 }}
