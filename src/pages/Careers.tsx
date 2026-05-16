@@ -1,5 +1,5 @@
 import PageShell from "@/components/PageShell";
-import RequestAccessDialog from "@/components/RequestAccessDialog";
+import JoinSquadDialog from "@/components/JoinSquadDialog";
 
 const values = [
   {
@@ -163,13 +163,13 @@ const Careers = () => {
               We're not running open reqs right now. Send us a note and tell us why you'd fit the fight.
             </p>
           </div>
-          <RequestAccessDialog
+          <JoinSquadDialog
             trigger={
               <button
                 type="button"
                 className="bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.15em] px-6 py-3 hover:bg-primary/90 transition-colors flex items-center gap-2"
               >
-                Get in touch ›
+                Apply ›
               </button>
             }
           />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageShell from "@/components/PageShell";
 import RequestAccessDialog from "@/components/RequestAccessDialog";
 
@@ -112,6 +113,15 @@ const About = () => {
             <p className="mt-1 text-xs font-mono uppercase tracking-[0.25em] text-foreground/60">
               CEO, KABIFI
             </p>
+
+            <div className="mt-12 flex justify-start">
+              <Link
+                to="/careers#join"
+                className="bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.15em] px-6 py-3 hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
+              >
+                Join our squad ›
+              </Link>
+            </div>
           </div>
         </div>
       </section>
