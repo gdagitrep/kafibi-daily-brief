@@ -18,7 +18,7 @@ const EarlyAccess = () => {
           Get back to building the brand, <em className="italic">not managing the mess.</em>
         </h2>
         <p className="text-lg text-secondary-foreground/70 max-w-xl mx-auto mb-10">
-          Five minutes to create your first brand record. Imports from the CSVs you already use. Priced for sub-$2M operators.
+          Five minutes to create your first brand record. Imports from the CSVs you already use. Priced for sub-$5M operators.
         </p>
         <RequestAccessDialog
           trigger={

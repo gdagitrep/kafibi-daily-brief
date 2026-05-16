@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const traits = [
-  "You're an early-stage CPG brand doing under $2M revenue.",
+  "You're an early-stage CPG brand doing under $5M revenue.",
   "You rely on co-packers and suppliers to actually make the product.",
   "You're juggling compliance, buyers, and ops with one to three people.",
   "You're too big for spreadsheets and too small for SAP or NetSuite.",
