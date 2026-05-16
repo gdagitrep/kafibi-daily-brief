@@ -55,7 +55,7 @@ const Hero = () => {
                 type="button"
                 className="bg-primary text-primary-foreground px-7 py-4 text-xs font-mono uppercase tracking-[0.2em] hover:bg-primary/90 transition-colors inline-flex items-center gap-3"
               >
-                GET STARTED <br /> › <br />
+                GET STARTED › <br />
               </button>
             }
           />
