@@ -1,5 +1,5 @@
 import PageShell from "@/components/PageShell";
-import RequestAccessDialog from "@/components/RequestAccessDialog";
+import JoinSquadDialog from "@/components/JoinSquadDialog";
 
 const values = [
   {
