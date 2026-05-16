@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Instrument Serif", "Georgia", "serif"],
+        serif: ["Instrument Serif", "Georgia", "serif"],
         sans: ["DM Sans", "system-ui", "sans-serif"],
         mono: ["DM Mono", "monospace"],
       },
@@ -52,9 +53,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "kafibi-purple": "#5D436D",
-        "kafibi-green": "#4A5F54",
-        "kafibi-slate": "#5F626C",
+        cream: "hsl(var(--cream))",
+        ink: "hsl(var(--ink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
