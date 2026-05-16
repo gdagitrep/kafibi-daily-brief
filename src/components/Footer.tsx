@@ -13,6 +13,7 @@ const Footer = () => {
           <p className="text-xs font-mono uppercase tracking-[0.15em]">The ops hub for early-stage CPG.</p>
         </div>
         <div className="flex flex-wrap items-center gap-6 text-xs font-mono uppercase tracking-[0.15em]">
+          <Link to="/about" className="hover:text-secondary-foreground transition-colors">About</Link>
           <Link to="/privacy" className="hover:text-secondary-foreground transition-colors">Privacy</Link>
           <Link to="/terms" className="hover:text-secondary-foreground transition-colors">Terms</Link>
           <Link to="/contact" className="hover:text-secondary-foreground transition-colors">Contact</Link>
