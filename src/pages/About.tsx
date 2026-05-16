@@ -133,7 +133,7 @@ const About = () => {
                 type="button"
                 className="bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.15em] px-6 py-3 hover:bg-primary/90 transition-colors flex items-center gap-2"
               >
-                GET STARTE <br /> › <br />
+                GET STARTED <br /> › <br />
               </button>
             }
           />
