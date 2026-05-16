@@ -199,9 +199,11 @@ const JoinSquadDialog = ({ trigger }: Props) => {
             Send Application
           </button>
           <p className="text-xs text-muted-foreground">
-            This opens your email app with the application pre-filled to service@kabifi.com.
+            This opens your email app with the application pre-filled to {RECIPIENT}.
           </p>
         </form>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );
