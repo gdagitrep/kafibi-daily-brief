@@ -29,9 +29,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
-          className="font-display text-secondary-foreground text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight max-w-3xl"
+          className="font-display text-secondary-foreground text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight max-w-4xl"
         >
-          Give Your Founders <em className="italic">Superpowers.</em>
+          Give Your CPG Brand <em className="italic">Superpowers.</em>
         </motion.h1>
 
         <motion.p
@@ -40,7 +40,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="mt-8 max-w-xl text-lg text-secondary-foreground/80 leading-relaxed"
         >
-          AI-Powered Ops Hub, designed for sub-$2M CPG brands. Spot stock-outs, compliance gaps, and missed buyer follow-ups before they cost you the shelf.
+          Your CPG Ops Hub, designed for sub-$5M CPG brands. Spot stock-outs, compliance gaps, and missed buyer follow-ups before they cost you the shelf.
         </motion.p>
 
         <motion.div
