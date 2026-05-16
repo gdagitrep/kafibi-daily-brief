@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 
 const schema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100),
+  name: z.string().trim().min(1, "Required").max(100),
   advantage: z.string().trim().min(1, "Required").max(1000),
   why: z.string().trim().min(1, "Required").max(1000),
   friction: z.string().trim().min(1, "Required").max(1000),
@@ -20,12 +20,19 @@ const schema = z.object({
   proof3: z.string().trim().min(1, "Required").max(500),
 });
 
+type FormState = z.infer<typeof schema>;
 type Props = { trigger: ReactNode };
+
+const inputClass =
+  "w-full border-2 border-primary/20 bg-background px-4 py-3 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-primary focus:outline-none";
+const labelClass =
+  "text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground";
+const hintClass = "text-xs text-muted-foreground italic leading-relaxed";
 
 const JoinSquadDialog = ({ trigger }: Props) => {
   const [open, setOpen] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormState>({
     name: "",
     advantage: "",
     why: "",
@@ -36,7 +43,7 @@ const JoinSquadDialog = ({ trigger }: Props) => {
     proof3: "",
   });
 
-  const update = (field: keyof typeof form, value: string) =>
+  const update = (field: keyof FormState, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -80,53 +87,6 @@ const JoinSquadDialog = ({ trigger }: Props) => {
     setOpen(false);
   };
 
-  const inputClass =
-    "w-full border-2 border-primary/20 bg-background px-4 py-3 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-primary focus:outline-none";
-  const labelClass =
-    "text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground";
-
-  const Field = ({
-    id,
-    label,
-    hint,
-    field,
-    textarea,
-    rows = 3,
-  }: {
-    id: string;
-    label: string;
-    hint?: string;
-    field: keyof typeof form;
-    textarea?: boolean;
-    rows?: number;
-  }) => (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className={labelClass}>{label}</label>
-      {hint && <p className="text-xs text-muted-foreground italic">{hint}</p>}
-      {textarea ? (
-        <textarea
-          id={id}
-          rows={rows}
-          className={inputClass}
-          value={form[field]}
-          onChange={(e) => update(field, e.target.value)}
-          maxLength={1000}
-          required
-        />
-      ) : (
-        <input
-          id={id}
-          className={inputClass}
-          value={form[field]}
-          onChange={(e) => update(field, e.target.value)}
-          maxLength={500}
-          required
-        />
-      )}
-      {errors[field] && <p className="text-xs text-destructive">{errors[field]}</p>}
-    </div>
-  );
-
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
@@ -138,44 +98,54 @@ const JoinSquadDialog = ({ trigger }: Props) => {
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-5">
-          <Field id="js-name" label="1. Name" hint="What should we call you?" field="name" />
-          <Field
-            id="js-advantage"
-            label="2. Your Unfair Advantage"
-            hint={`Don't give us "hard worker" or "team player." If the building is on fire, what is the specific, undeniable thing we are relying on you to do better than anyone else in the room?`}
-            field="advantage"
-            textarea
-          />
-          <Field
-            id="js-why"
-            label="3. Why Kabifi?"
-            hint="Our manifesto was a filter. If you passed it, why does this specific fight — saving physical brands from operational chaos — matter to you? No generic startup fluff."
-            field="why"
-            textarea
-          />
-          <Field
-            id="js-friction"
-            label="4. What friction do you love destroying?"
-            hint="Most people avoid friction. Builders eat it for breakfast. What specific kind of mess, chaos, or broken system gives you a sick satisfaction to fix?"
-            field="friction"
-            textarea
-          />
-          <Field
-            id="js-mastery"
-            label="5. What are you obsessively trying to become the best in the world at?"
-            hint="Not your job title. Not your current skill level. Where is your trajectory pointed? What are you relentlessly pursuing mastery over?"
-            field="mastery"
-            textarea
-          />
-          <div className="space-y-2">
-            <p className={labelClass}>6. 3 Bullets of Proof</p>
-            <p className="text-xs text-muted-foreground italic">
-              No corporate jargon. No "managed a team of 5." Give us 3 undeniable facts about what you've actually shipped, broken, fixed, or conquered. Show us the scar tissue.
-            </p>
-            <Field id="js-p1" label="Bullet 1" field="proof1" />
-            <Field id="js-p2" label="Bullet 2" field="proof2" />
-            <Field id="js-p3" label="Bullet 3" field="proof3" />
+          <div className="space-y-1.5">
+            <label htmlFor="js-name" className={labelClass}>1. Name</label>
+            <p className={hintClass}>What should we call you?</p>
+            <input id="js-name" className={inputClass} value={form.name} onChange={(e) => update("name", e.target.value)} maxLength={100} required />
+            {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
           </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="js-advantage" className={labelClass}>2. Your Unfair Advantage</label>
+            <p className={hintClass}>Don't give us "hard worker" or "team player." If the building is on fire, what is the specific, undeniable thing we are relying on you to do better than anyone else in the room?</p>
+            <textarea id="js-advantage" rows={3} className={inputClass} value={form.advantage} onChange={(e) => update("advantage", e.target.value)} maxLength={1000} required />
+            {errors.advantage && <p className="text-xs text-destructive">{errors.advantage}</p>}
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="js-why" className={labelClass}>3. Why Kabifi?</label>
+            <p className={hintClass}>Our manifesto was a filter. If you passed it, why does this specific fight — saving physical brands from operational chaos — matter to you? No generic startup fluff.</p>
+            <textarea id="js-why" rows={3} className={inputClass} value={form.why} onChange={(e) => update("why", e.target.value)} maxLength={1000} required />
+            {errors.why && <p className="text-xs text-destructive">{errors.why}</p>}
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="js-friction" className={labelClass}>4. What friction do you love destroying?</label>
+            <p className={hintClass}>Most people avoid friction. Builders eat it for breakfast. What specific kind of mess, chaos, or broken system gives you a sick satisfaction to fix?</p>
+            <textarea id="js-friction" rows={3} className={inputClass} value={form.friction} onChange={(e) => update("friction", e.target.value)} maxLength={1000} required />
+            {errors.friction && <p className="text-xs text-destructive">{errors.friction}</p>}
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="js-mastery" className={labelClass}>5. What are you obsessively trying to become the best in the world at?</label>
+            <p className={hintClass}>Not your job title. Not your current skill level. Where is your trajectory pointed? What are you relentlessly pursuing mastery over?</p>
+            <textarea id="js-mastery" rows={3} className={inputClass} value={form.mastery} onChange={(e) => update("mastery", e.target.value)} maxLength={1000} required />
+            {errors.mastery && <p className="text-xs text-destructive">{errors.mastery}</p>}
+          </div>
+
+          <div className="space-y-3">
+            <p className={labelClass}>6. 3 Bullets of Proof</p>
+            <p className={hintClass}>No corporate jargon. No "managed a team of 5." Give us 3 undeniable facts about what you've actually shipped, broken, fixed, or conquered. Show us the scar tissue.</p>
+            <div className="space-y-2">
+              <input className={inputClass} placeholder="Bullet 1" value={form.proof1} onChange={(e) => update("proof1", e.target.value)} maxLength={500} required />
+              {errors.proof1 && <p className="text-xs text-destructive">{errors.proof1}</p>}
+              <input className={inputClass} placeholder="Bullet 2" value={form.proof2} onChange={(e) => update("proof2", e.target.value)} maxLength={500} required />
+              {errors.proof2 && <p className="text-xs text-destructive">{errors.proof2}</p>}
+              <input className={inputClass} placeholder="Bullet 3" value={form.proof3} onChange={(e) => update("proof3", e.target.value)} maxLength={500} required />
+              {errors.proof3 && <p className="text-xs text-destructive">{errors.proof3}</p>}
+            </div>
+          </div>
+
           <button
             type="submit"
             className="w-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
