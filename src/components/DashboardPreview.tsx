@@ -2,51 +2,51 @@ import { motion } from "framer-motion";
 
 const actions = [
   {
-    label: "INVENTORY ALERT",
+    label: "SLA ALERT",
     labelColor: "text-destructive",
     dotColor: "bg-destructive",
-    text: 'Rush PO for "Heritage Denim" stock will deplete by Thursday.',
-    action: "Create PO",
+    text: "Co-packer past 24hr response on Heritage Granola PO. Auto-drafted follow-up email ready.",
+    action: "Send Follow-Up",
     actionFilled: true,
   },
   {
-    label: "REBALANCE",
+    label: "COMPLIANCE HOLD",
     labelColor: "text-[hsl(35,70%,45%)]",
     dotColor: "bg-[hsl(35,70%,45%)]",
-    text: "Move 24 units of Coastal Tee from Warehouse → Store #2. Selling 3× faster there.",
-    action: "Approve Move",
+    text: "Allergen review pending for New SKU Label. Requires sign-off before print run on Tuesday.",
+    action: "Review Label",
     actionFilled: false,
   },
   {
-    label: "PROMO CHECK",
+    label: "BUYER FOLLOW-UP",
     labelColor: "text-[hsl(35,70%,45%)]",
     dotColor: "bg-[hsl(35,70%,45%)]",
-    text: "Weekend promo on Linen Pants is eroding margin. Consider ending 1 day early.",
-    action: "Review",
+    text: "7-day check-in due for Whole Foods buyer who received Coastal Mix sample.",
+    action: "Draft Email",
     actionFilled: false,
   },
   {
-    label: "FORECAST UPDATE",
+    label: "INVENTORY TRIGGER",
     labelColor: "text-secondary",
     dotColor: "bg-secondary",
-    text: "Summer Linen Shirt velocity up 18% this week. Reorder window moves 6 days earlier.",
-    action: "View SKU",
+    text: "Reorder point hit for Core SKU 001. Co-packer lead time is 14 days. Stock-out predicted in 18 days.",
+    action: "Create Work Order",
     actionFilled: false,
   },
 ];
 
 const stats = [
-  { label: "NEEDS ORDERING", value: "2", sub: "SKUs below reorder point", borderColor: "border-t-destructive" },
-  { label: "NEEDS ATTENTION", value: "1", sub: "Promo margin at risk", borderColor: "border-t-[hsl(35,70%,45%)]" },
-  { label: "RUNNING WELL", value: "8", sub: "SKUs on track today", borderColor: "border-t-secondary" },
+  { label: "SLA ALERT", value: "1", sub: "Vendor past 24hr response time", borderColor: "border-t-destructive" },
+  { label: "COMPLIANCE", value: "1", sub: "Label gate awaiting sign-off", borderColor: "border-t-[hsl(35,70%,45%)]" },
+  { label: "ON TRACK", value: "2", sub: "Production runs on schedule", borderColor: "border-t-secondary" },
 ];
 
 const sidebarItems = [
-  { icon: "◆", label: "Daily Brief", active: true },
-  { icon: "▦", label: "SKU Command", active: false },
-  { icon: "◎", label: "Forecast", active: false },
-  { icon: "⊕", label: "Suppliers", active: false },
-  { icon: "◇", label: "Integrations", active: false },
+  { icon: "◆", label: "Ops Brief", active: true },
+  { icon: "▦", label: "Production", active: false },
+  { icon: "◎", label: "Compliance", active: false },
+  { icon: "⊕", label: "Buyers", active: false },
+  { icon: "◇", label: "Vendors", active: false },
 ];
 
 const DashboardPreview = () => {
@@ -71,7 +71,7 @@ const DashboardPreview = () => {
               <div className="w-3 h-3 rounded-full bg-[hsl(140,50%,55%)]" />
             </div>
             <div className="flex-1 text-center text-xs text-muted-foreground font-mono">
-              kabifi.com - Daily Brief
+              kabifi.com - Ops Hub
             </div>
           </div>
 
@@ -113,7 +113,7 @@ const DashboardPreview = () => {
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground mb-1">
-                    Your Daily Brief - March 18, 2026
+                    Your Ops Brief - March 18, 2026
                   </p>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                     Today's <em className="font-serif italic">priorities.</em>
@@ -169,7 +169,7 @@ const DashboardPreview = () => {
               <div className="mt-6 flex flex-wrap items-center gap-4 text-[10px] text-muted-foreground font-mono">
                 <span>Predicted stockouts this week: <strong className="text-foreground">1</strong></span>
                 <span>Avoided last week: <strong className="text-foreground">3</strong></span>
-                <span className="ml-auto">11 SKUs tracked · Helio Retail</span>
+                <span className="ml-auto">12 SKUs tracked · Kabifi Ops Hub</span>
               </div>
             </div>
           </div>

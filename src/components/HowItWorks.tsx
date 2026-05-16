@@ -4,19 +4,19 @@ const steps = [
   {
     number: "01",
     title: "Connect your data",
-    text: "Plug in your POS, inventory,  and suppliers. No new systems to learn.",
+    text: "Import your SKUs, Co-packers, and Suppliers via CSV. No new systems to learn. (Shopify & QB integrations coming soon).",
     borderColor: "border-t-primary",
   },
   {
     number: "02",
-    title: "We learn your operation",
-    text: "Kabifi maps your operation velocity, patterns, reorder windows and risk signals. Automatically.",
+    title: "We map your operation",
+    text: "Kabifi maps your vendor SLAs, production timelines, compliance gates, and reorder windows. Automatically.",
     borderColor: "border-t-secondary",
   },
   {
     number: "03",
     title: "Get your daily action list",
-    text: "Each morning get 3-5 clear actions. Covering what to order, what to move, what to watch and ultimately what to do. ",
+    text: "Each morning get 3-5 clear actions. Covering who to follow up with, what to approve, and when to reorder.",
     borderColor: "border-t-accent",
   },
 ];
