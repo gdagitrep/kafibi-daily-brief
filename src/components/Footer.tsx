@@ -20,7 +20,7 @@ const Footer = () => {
             © 2026 Kabifi
           </span>
           <p className="absolute right-0 text-xs text-muted-foreground">
-            Predictive operations for modern retail.
+            The ops hub for early-stage CPG.
           </p>
         </div>
       </div>

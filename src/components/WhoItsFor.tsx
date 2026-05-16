@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const traits = [
-  { label: "You run 1 - 3 locations", color: "border-l-primary" },
-  { label: "You sell in store, online, or both", color: "border-l-secondary" },
-  { label: "You make decisions faster than your systems can keep up", color: "border-l-accent" },
+  { label: "You are an early-stage CPG brand (under $2M revenue)", color: "border-l-primary" },
+  { label: "You rely on co-packers and suppliers to make your product", color: "border-l-secondary" },
+  { label: "You are juggling compliance, buyers, and ops with a team of 1-2 people", color: "border-l-accent" },
 ];
 
 const WhoItsFor = () => {
@@ -14,7 +14,7 @@ const WhoItsFor = () => {
           Who it's for
         </h2>
         <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-          If this sounds like you - Kabifi was built for your operation
+          If this sounds like you - Kabifi was built for your brand.
         </p>
         <motion.div
           initial={{ opacity: 0 }}

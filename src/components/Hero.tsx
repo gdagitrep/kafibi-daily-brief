@@ -11,7 +11,7 @@ const Hero = () => {
           transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
         >
           <span className="inline-block border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.15em] px-4 py-1.5 mb-6">
-            DAILY DECISION ENGINE FOR RETAIL OPERATIONS
+            THE OPS HUB FOR EMERGING CPG BRANDS
           </span>
         </motion.div>
         <motion.h1
@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
           className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
         >
-          Know what needs attention today, before it becomes a problem for <em className="italic">later</em>.
+          Know what needs attention today, before it becomes a stock-out, a compliance failure, or a missed buyer follow-up <em className="italic">tomorrow</em>.
         </motion.h1>
         <motion.div
           initial={{ scaleX: 0 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
           className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-[60ch] mx-auto"
         >
-          Your operation is already generating the signals. Kabifi turns them into a system built around how your business actually runs.
+          Your operation is already generating the signals. Kabifi turns them into a system built around how early-stage CPG brands actually run.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -12,7 +12,7 @@ const EarlyAccess = () => {
         className="max-w-xl mx-auto text-center"
       >
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
-          Built with operators, not just for them.
+          Built with CPG operators, not just for them.
         </h2>
         <RequestAccessDialog
           trigger={
@@ -20,7 +20,7 @@ const EarlyAccess = () => {
               type="button"
               className="bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Free Ops Snapshot
+              GET STARTED
             </button>
           }
         />
