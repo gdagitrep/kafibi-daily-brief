@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RequestAccessDialog from "@/components/RequestAccessDialog";
+import logo from "@/assets/kabifi-mark.png";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
       <nav className="bg-ink text-secondary-foreground border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">K</div>
+            <img src={logo} alt="Kabifi logo" className="h-8 w-8 object-contain" />
             <span className="font-display text-2xl text-secondary-foreground">Kabifi</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-[0.15em] text-secondary-foreground/70">
