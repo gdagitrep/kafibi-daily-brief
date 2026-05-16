@@ -1,6 +1,6 @@
 import PageShell from "@/components/PageShell";
 import JoinSquadDialog from "@/components/JoinSquadDialog";
-import collabImg from "@/assets/careers-collab.jpg";
+
 import whiteboardImg from "@/assets/careers-whiteboard.jpg";
 import warehouseImg from "@/assets/careers-warehouse.jpg";
 import debateImg from "@/assets/careers-debate.jpg";
