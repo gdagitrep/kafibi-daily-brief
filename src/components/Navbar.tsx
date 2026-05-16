@@ -19,6 +19,7 @@ const Navbar = () => {
             <a href="#features" className="hover:text-secondary-foreground transition-colors">Features</a>
             <a href="#industries" className="hover:text-secondary-foreground transition-colors">Industries</a>
             <a href="#how" className="hover:text-secondary-foreground transition-colors">How It Works</a>
+            <Link to="/about" className="hover:text-secondary-foreground transition-colors">About</Link>
           </div>
           <RequestAccessDialog
             trigger={
