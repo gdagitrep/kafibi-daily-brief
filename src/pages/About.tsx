@@ -71,16 +71,18 @@ const About = () => {
           </div>
           <div className="md:col-span-8 bg-ink p-8 space-y-6 text-secondary-foreground/80 leading-relaxed">
             <p>
-              I started Kabifi because I know this pain intimately. I grew up in my parents' restaurant, where I saw the real, hard cost of operational mishaps. By 26, I had worked every position in the industry: from dishwasher to chef to general manager. I helped run kitchens for Bob Evans, the original Sweetgreen locations, and Earls Kitchen + Bar, among many others.
+              I started Kabifi because I know this pain intimately. I grew up in my parents' restaurant, where I saw the real, hard cost of operational mishaps. By 26, I had worked every position in the industry—from dishwasher to general manager. I didn’t just clock in; I learned the lessons. Scaling the original Sweetgreen locations taught me the chaos of explosive demand outpacing supply. Running kitchens for established brands like Bob Evans showed me the limitations of rigid, legacy systems. And keeping scrappy mom-and-pop shops afloat taught me what happens when you have zero margin for error and a broken supply chain. 
             </p>
             <p>
               I know what happens when the supply chain breaks down, because I've felt it on the line.
             </p>
             <p>
-              Eventually, I stepped out of the kitchen. I worked as a congressional staffer, ran campaigns, and ultimately landed in tech. But looking around Silicon Valley, one thing became painfully clear: the people building software for food and consumer products had never actually worked in them.
+              Eventually, I stepped out of the kitchen. I worked as a congressional staffer, ran campaigns, and ultimately landed in tech. But looking around Silicon Valley, one thing became painfully clear: They couldn't understand the world I came from.
             </p>
             <p>
               They didn't understand the blood, sweat, and razor-thin margins that go into getting a product onto a shelf. They built software for a world they'd never actually worked in.
+
+              They didn't understand the world I came from.
             </p>
           </div>
         </div>
@@ -131,7 +133,7 @@ const About = () => {
                 type="button"
                 className="bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.15em] px-6 py-3 hover:bg-primary/90 transition-colors flex items-center gap-2"
               >
-                Request Access <span aria-hidden>›</span>
+                GET STARTE <br /> › <br />
               </button>
             }
           />
