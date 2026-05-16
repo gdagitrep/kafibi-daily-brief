@@ -16,7 +16,7 @@
     --popover-foreground: 220 30% 8%;
 
     /* Electric cobalt blue - signature accent */
-    --primary: 232 100% 50%;
+    --primary: 266 27% 55%;
     --primary-foreground: 0 0% 100%;
 
     /* Deep ink navy - hero/nav surfaces */
@@ -26,7 +26,7 @@
     --muted: 40 20% 93%;
     --muted-foreground: 220 10% 38%;
 
-    --accent: 232 100% 50%;
+    --accent: 266 27% 55%;
     --accent-foreground: 0 0% 100%;
 
     /* Warm cream section bg */
@@ -38,7 +38,7 @@
 
     --border: 220 15% 88%;
     --input: 220 15% 88%;
-    --ring: 232 100% 50%;
+    --ring: 266 27% 55%;
 
     --radius: 0px;
 

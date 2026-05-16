@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/kabifi-mark.png";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-6 h-6 bg-primary flex items-center justify-center text-primary-foreground font-bold text-xs">K</div>
+            <img src={logo} alt="Kabifi logo" className="h-7 w-7 object-contain" />
             <span className="font-display text-2xl text-secondary-foreground">Kabifi</span>
           </div>
           <p className="text-xs font-mono uppercase tracking-[0.15em]">The ops hub for early-stage CPG.</p>

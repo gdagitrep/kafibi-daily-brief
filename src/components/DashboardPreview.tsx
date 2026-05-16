@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/kabifi-mark.png";
 
 const actions = [
   {
@@ -80,7 +81,7 @@ const DashboardPreview = () => {
             <div className="w-48 border-r border-border bg-[hsl(30,15%,96%)] p-4 hidden md:flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-8">
-                  <div className="w-8 h-8 bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold rounded-sm">K</div>
+                  <img src={logo} alt="Kabifi logo" className="w-8 h-8 object-contain" />
                   <span className="text-sm font-bold text-foreground">Kabifi</span>
                 </div>
                 <div className="space-y-1">
