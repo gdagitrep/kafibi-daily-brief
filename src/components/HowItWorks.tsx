@@ -2,45 +2,45 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    number: "01",
+    n: "01",
     title: "Connect your data",
-    text: "Import your SKUs, Co-packers, and Suppliers via CSV. No new systems to learn. (Shopify & QB integrations coming soon).",
-    borderColor: "border-t-primary",
+    text: "Import SKUs, co-packers, and suppliers via CSV in under five minutes. Shopify and QuickBooks integrations coming soon.",
   },
   {
-    number: "02",
+    n: "02",
     title: "We map your operation",
-    text: "Kabifi maps your vendor SLAs, production timelines, compliance gates, and reorder windows. Automatically.",
-    borderColor: "border-t-secondary",
+    text: "Kabifi auto-maps vendor SLAs, production timelines, compliance gates, and reorder windows around how your brand actually runs.",
   },
   {
-    number: "03",
-    title: "Get your daily action list",
-    text: "Each morning get 3-5 clear actions. Covering who to follow up with, what to approve, and when to reorder.",
-    borderColor: "border-t-accent",
+    n: "03",
+    title: "Get your daily brief",
+    text: "Each morning, three to five clear actions: who to follow up with, what to approve, and when to reorder. No more triaging your inbox.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="py-8 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-10">
-          How it works
+    <section id="how" className="bg-background py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-primary mb-4">
+          ── How it works
+        </p>
+        <h2 className="font-display text-5xl md:text-6xl text-ink tracking-tight mb-16 max-w-3xl">
+          From spreadsheet chaos to a single <em className="italic">command center.</em>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {steps.map((step, i) => (
+        <div className="grid md:grid-cols-3 gap-px bg-ink/10">
+          {steps.map((s, i) => (
             <motion.div
-              key={i}
+              key={s.n}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.19, 1, 0.22, 1] }}
-              className={`border border-border ${step.borderColor} border-t-[3px] p-8`}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-background p-8 min-h-[260px] flex flex-col"
             >
-              <span className="font-mono text-xs text-accent tracking-widest">{step.number}</span>
-              <h3 className="font-display text-xl font-semibold text-foreground mt-4 mb-3">{step.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{step.text}</p>
+              <span className="font-mono text-xs text-primary tracking-[0.2em] mb-6">{s.n}</span>
+              <h3 className="font-display text-3xl text-ink mb-3">{s.title}</h3>
+              <p className="text-sm text-ink/60 leading-relaxed">{s.text}</p>
             </motion.div>
           ))}
         </div>
