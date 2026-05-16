@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +6,39 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 40 30% 97%;
+    --foreground: 220 30% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 220 30% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 220 30% 8%;
 
-    --primary: 280 24% 34%;
+    /* Electric cobalt blue - signature accent */
+    --primary: 232 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 153 14% 33%;
-    --secondary-foreground: 0 0% 100%;
+    /* Deep ink navy - hero/nav surfaces */
+    --secondary: 220 35% 10%;
+    --secondary-foreground: 40 30% 97%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 226 6% 40%;
+    --muted: 40 20% 93%;
+    --muted-foreground: 220 10% 38%;
 
-    --accent: 225 5% 40%;
+    --accent: 232 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warm cream section bg */
+    --cream: 45 60% 90%;
+    --ink: 220 35% 10%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 280 24% 34%;
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 232 100% 50%;
 
     --radius: 0px;
 
@@ -58,13 +63,17 @@
   }
 }
 
-/* Gradient accent bar */
+/* Thin accent bar */
 .gradient-bar {
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    hsl(280 24% 34%) 0%,
-    hsl(153 14% 33%) 50%,
-    hsl(225 5% 40%) 100%
-  );
+  height: 2px;
+  background: hsl(var(--primary));
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
 }
