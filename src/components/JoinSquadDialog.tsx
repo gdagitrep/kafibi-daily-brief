@@ -107,7 +107,7 @@ const JoinSquadDialog = ({ trigger }: Props) => {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto" onOverlayClick={() => handleOpenChange(false)}>
         {sent ? (
           <div className="py-6 space-y-6">
             <DialogHeader>
