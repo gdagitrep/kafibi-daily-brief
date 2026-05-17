@@ -61,6 +61,10 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Thin accent bar */
