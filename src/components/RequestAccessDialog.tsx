@@ -79,7 +79,7 @@ const RequestAccessDialog = ({ trigger }: RequestAccessDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg" onOverlayClick={() => setOpen(false)}>
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">
             Request Access
